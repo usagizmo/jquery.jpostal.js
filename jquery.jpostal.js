@@ -805,13 +805,13 @@ window.jQuery_jpostal_callback = function (i_data) {
             });
         } else {
             selector = Jpos.options.postcode[0];
-            $(selector).bind('keyup change', function () {
+            $(selector).bind('input', function () {
                 Jpos.main();
             });
 
             if (1 <= Jpos.options.postcode.length) {
                 selector = Jpos.options.postcode[1];
-                $(selector).bind('keyup change', function () {
+                $(selector).bind('input', function () {
                     Jpos.main();
                 });
             }
